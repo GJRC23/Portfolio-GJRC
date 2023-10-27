@@ -330,7 +330,7 @@ body{
 .contacto{
     background:
         linear-gradient(rgba(0,12,103,1), rgba(0,12,103,.8)),
-        url(img/ContactosIMG.webp);
+        url(ContactosIMG.webp);
         background-size: cover;
         color: #fff;
         margin-top: 100px;

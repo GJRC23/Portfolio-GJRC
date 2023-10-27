@@ -178,6 +178,3 @@ document.getElementById('form').addEventListener('submit', function(event) {
             console.log('FAILED...', error);
         });
 });
-
-
-
