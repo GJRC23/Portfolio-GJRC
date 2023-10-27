@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js" integrity="sha512-DHNepbIus9t4e6YoMBSJLwl+nnm0tIwMBonsQQ+W9NKN6gVVVbomJs9Ii3mQ+HzGZiU5FyJLdnAz9a63ZgZvTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <title>Porfolio</title>
+</head>
+<body>
+    <!-- Secciòn INICIO -->
+    <span class="sombra">
+        <section id="inicio" class="inicio">
+            <div class="contenido">
+                <header>
+                    <div class="logo">
+                        <i class="fa-brands fa-codepen"></i>
+                        <h1>Gastón</h1>
+                    </div>
+                    <nav id="nav" class=""">
+                        <a href="#servicios">Formación</a>
+                        <a href="#trabajos">Proyectos</a>
+                        <a href="#contacto">Contacto</a>
+                    </nav>
+    
+                    <!-- Icono del menu responsive -->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+    
+                    <div class="redes">
+                        <a href="https://www.linkedin.com/in/gast%C3%B3n-rodriguez-consoli/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/GJRC23" target="_blank"><i class="fa-brands fa-square-github"></i></i></a>
+                    </div>
+                </header>
+    
+                <div class="fila">
+                    <div class="col">
+                        <h2>Desarrollador Fullstack</h2>
+                        <p>Formación en programación en lenguaje HTML, CSS, JavaScript y Angular que me han proporcionado las habilidades necesarias para trabajar de manera efectiva.</p>
+                        <button class="btn btn-1" onclick="descargarCV()">Descargar CV</button>
+                    </div>
+                    <div class="col">
+                        <div class="contenedor-img">
+                            <img src="img/CompuIMG.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </span>
+
+    <!-- sección SERVICIOS -->
+    <section id="servicios" class="servicios">
+        <div class="fila">
+            <div class="col">
+                <div class="card">
+                    <div class="icono color1">
+                        <div class="circulo">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                    </div>
+                    <h3>HENRY</h3>
+                    <p>Desarrollé habilidades en JavaScript, React, Node.js y PostgreSQL durante el bootcamp de HENRY. Además, adquirí experiencia en el desarrollo de aplicaciones web completas y trabajo colaborativo en equipo.</p>
+
+                    <a href="https://certificates.soyhenry.com/new-cert?id=06a3664a91963a5949a2586c74af88881228cca6a28611e34dab32a21898a0a1" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="icono color2">
+                        <div class="circulo">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
+                    </div>
+                    <h3>EF Standard English Test</h3>
+                    <p>Certifiqué mi dominio del idioma inglés con un nivel C2 en el EF Standard English Test, demostrando habilidades avanzadas en comprensión oral y escrita, así como en expresión fluida y efectiva.</p>
+
+                    <a href="https://www.efset.org/cert/4UcoPH" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="icono color6">
+                        <div class="circulo">
+                            <i class="fa-brands fa-angular"></i>
+                        </div>
+                    </div>
+                    <h3>Universidad Angular (Global Mentoring)</h3>
+                    <p>Obtuve un dominio de Angular, incluyendo TypeScript, componentes, servicios, enrutamiento y HTTP. Además, adquirí habilidades avanzadas en la creación de aplicaciones web dinámicas.</p>
+
+                    <a href="https://www.udemy.com/certificate/UC-9771e7d5-693e-4f04-bb3c-e848d2a55fab/" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="col">
+                <div class="card">
+                    <div class="icono color3">
+                        <div class="circulo">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                    </div>
+                    <h3>Universidad CSS (Global Mentoring)</h3>
+                    <p>Amplié mis habilidades en diseño web y maquetación utilizando CSS a través del curso de Global Mentoring. Adquirí conocimientos detallados en la creación de diseños responsivos y atractivos.</p>
+
+                    <a href="https://www.udemy.com/certificate/UC-fc8d4c03-0e6f-4772-af5f-e9e9b97ebb90/" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="icono color4">
+                        <div class="circulo">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                    </div>
+                    <h3>Universidad HTML (Global Mentoring)</h3>
+                    <p>Sumé fundamentos de la estructura web con HTML. Adquirí conocimientos esenciales en la creación y organización de contenido web, sentando las bases para el desarrollo de sitios web modernos y funcionales.</p>
+
+                    <a href="https://www.udemy.com/certificate/UC-4c90992c-1000-41c3-a24f-0ac0c7658174/" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="icono color3">
+                        <div class="circulo">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                    </div>
+                    <h3>CSS (EdYoda Digital University)</h3>
+                    <p>Desarrollé mis habilidades de diseño web con CSS a través del curso de EdYoda Digital University. Aprendí técnicas avanzadas de estilizado y diseño para crear interfaces web.</p>
+
+                    <a href="https://www.udemy.com/certificate/UC-aa7d388d-d82c-45d2-bacf-87d8f9a83f00/" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="col">
+                <div class="card">
+                    <div class="icono color4">
+                        <div class="circulo">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                    </div>
+                    <h3>Universidad HTML (EdYoda Digital University)</h3>
+                    <p>Adquirí una comprensión sólida de HTML a través del curso de EdYoda Digital University, aprendiendo a crear estructuras de página claras y semánticas para construir sitios web eficaces y accesibles.</p>
+
+                    <a href="https://www.udemy.com/certificate/UC-fc8d4c03-0e6f-4772-af5f-e9e9b97ebb90/" target="_blank">Ver Certificado</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="icono color5">
+                        <div class="circulo">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                    </div>
+                    <h3>Tecnicatura Universitaria en Programación</h3>
+                    <p>Actualmente estudiando de la Universidad Técnica Nacional de Mar del Plata para conseguir mi título de técnico en programación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sección trabajos -->
+    <section class="trabajos" id="trabajos">
+        <h2>Mis Proyectos</h2>
+
+        <nav>
+            <a href="javascript:void(0)" class="borde" id="item" onclick="verCategoria('item')">Todos</a>
+            <a href="javascript:void(0)" class="" id="JavaScript" onclick="verCategoria('JavaScript')">JavaScript</a>
+            <a href="javascript:void(0)" class="" id="Wix" onclick="verCategoria('Wix')">Wix</a>
+            <a href="javascript:void(0)" class="" id="Angular" onclick="verCategoria('Angular')">Angular</a>
+        </nav>
+
+        <div class="galeria">
+            <div class="item JavaScript">
+                <img src="img/PlumaIMG.jpg" alt="">
+                <div class="info">
+                    <h3>Pluma Librería</h3>
+                    <span>JavaScript</span><span>React</span><span>MongoDB</span>
+                    <a href="https://plumalibreria.vercel.app/" target="_blank">Ver Trabajo</a>
+                </div>
+            </div>
+            <div class="item Wix">
+                <img src="img/AsturIMG.jpg" alt="">
+                <div class="info">
+                    <h3>Astur Group</h3>
+                    <span>Wix</span><span>UX/UI</span><span>Diseño Web</span>
+                    <a href="https://www.asturgroup.org/" target="_blank">Ver Trabajo</a>
+                </div>
+            </div>
+            <div class="item Angular">
+                <img src="img/Budget App.jpg" alt="">
+                <div class="info">
+                    <h3>Budget App</h3>
+                    <span>Angular</span><span>CSS</span><span>HTML</span>
+                    <a href="https://github.com/GJRC23/BudgetApp.git" target="_blank">Ver Trabajo</a>
+                </div>
+            </div>
+            <div class="item JavaScript">
+                <img src="img/DogsIMG.jpg" alt="">
+                <div class="info">
+                    <h3>Dogs Project</h3>
+                    <span>JavaScript</span><span>React</span><span>Redux</span>
+                    <a href="#">Ver Trabajo</a>
+                </div>
+            </div>
+            <div class="item Wix">
+                <img src="img/HotelPraiamarIMG.jpg" alt="">
+                <div class="info">
+                    <h3>Hotel Praiamar</h3>
+                    <span>Wix</span><span>UX/UI</span><span>Diseño Web</span>
+                    <a href="https://www.hpraiamar.com.br/" target="_blank">Ver Trabajo</a>
+                </div>
+            </div>
+            <div class="item Angular">
+                <img src="img/ListadoIMG.png" alt="">
+                <div class="info">
+                    <h3>Listado de Personas</h3>
+                    <span>Angular</span><span>CSS</span><span>HTML</span>
+                    <a href="https://listado-personas-ec39f.web.app" target="_blank">Ver Trabajo</a>
+                </div>
+            </div>
+            <div class="item JavaScript">
+                <img src="img/RickYMortyIMG.jpg" alt="">
+                <div class="info">
+                    <h3>Rick & Morty Characters</h3>
+                    <span>JavaSCript</span><span>React</span><span>Redux</span>
+                    <a href="https://github.com/GJRC23/Rick_And_Morty_Page.git" target="_blank">Ver Trabajo</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sección contacto -->
+    <section class="contacto" id="contacto">
+        <div class="contenedor-contacto">
+            <h2>Contacto</h2>
+            <div class="fila">
+                <div class="col">
+                    <div class="info">
+                        <h3>Email:</h3>
+                        <p>gastuconsoli8@gmail</p>
+                    </div>
+                    <div class="info">
+                        <h3>Teléfono:</h3>
+                        <p>+54 223 5987757</p>
+                    </div>
+                    <div class="info">
+                        <h3>País</h3>
+                        <p>Argentina</p>
+                    </div>
+                    <div class="info">
+                        <h3>Ciudad:</h3>
+                        <p>Mar del Plata</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <form id="form">
+                        <input type="text" name="from_name" for="from_name" placeholder="Nombre">
+                        <input type="text" name="reply_to" for="reply_to" placeholder="Correo">
+                        <textarea name="message" cols="30" rows="10" for="message" placeholder="Mensaje"></textarea>
+                        <input type="submit" value="Enviar" class="btn">
+                    </form>
+
+                    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                    <script type="text/javascript">
+                        emailjs.init('IpphO5Jp4ep8nmNCG');
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>Creado por Gastón Rodriguez Consoli - 2023</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
