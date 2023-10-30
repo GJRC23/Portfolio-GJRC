@@ -1,19 +1,29 @@
 //Descarga CV
-function descargarCV() {
-    // Ruta de tu archivo
-    var url = './CV Gastón Rodriguez Consoli.pdf';
-    // Nombre con el que se descargará el archivo
-    var nombreArchivo = 'CV Gastón Rodriguez Consoli';
+function descargarCV(idioma) {
+    var url, nombreArchivo;
 
-    // Crear un elemento <a> temporal
+    if (idioma === 'español') {
+        // Ruta del archivo en español
+        url = './CV Gastón Rodriguez Consoli.pdf';
+        nombreArchivo = 'CV Gastón Rodriguez Consoli';
+    } else if (idioma === 'inglés') {
+        // Ruta del archivo en inglés
+        url = './CV Gastón Rodriguez Consoli English.pdf';
+        nombreArchivo = 'CV Gastón Rodriguez Consoli English';
+    } else {
+        // Si el idioma no está especificado, devuelve un error o un mensaje indicando que no se proporcionó un idioma válido.
+        console.error('Idioma no válido');
+        return;
+    }
+
     var link = document.createElement('a');
     link.href = url;
     link.download = nombreArchivo;
-    // Añadir el link al DOM y simular el clic
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 }
+
 
 //funciòn que carga las animaciones de las habilidades
 function cargarAnimaciones(){
