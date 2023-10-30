@@ -52,15 +52,6 @@ body{
 #inicio header nav a:hover{
     border-bottom: 2px solid #ff00c3;
 }
-.inicio .redes a{
-    text-decoration: none;
-    color: #fff;
-    display: inline-block;
-    margin: 0 10px;
-}
-.inicio .redes a:hover{
-    color: #ff00c3;
-}
 .inicio .fila{
     display: flex;
     margin-top: 50px;
@@ -194,52 +185,7 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
-/* seccion HABILIDADES */
-.habilidades{
-    background:linear-gradient(to right, #000c76, #007be5);
-    color: #fff;
-    padding: 60px 0;
-    position: relative;
-    top: -100px;
-}
-.habilidades h2{
-    text-align: center;
-}
-.habilidades .contenedor-habi{
-    max-width: 1100px;
-    margin: auto;
-}
-.habilidades .fila{
-    display: flex;
-    justify-content: space-around;
-}
-.score{
-    padding: 10px;
-    margin: auto 0;
-}
-.score .box{
-    width: 100%;
-}
-.score .box h2{
-    display: block;
-    text-align: center;
-}
-.score .box .chart{
-    position: relative;
-    width: 160px;
-    height: 160px;
-    margin: auto;
-    line-height: 160px;
-    font-size: 40px;
-    text-align: center;
-}
 
-/* Esta clase se genera dinámicamente por la librera para graficos */
-.score .box canvas{
-    position:absolute;
-    top: 0;
-    left: 0;
-}
 /* SECCION T R A B A J O S */
 .trabajos{
     max-width: 1100px;
@@ -377,6 +323,7 @@ body{
     background: linear-gradient(to right, #ff62d0, #ff00d9);
 }
 
+/* FOOTER */
 footer{
     background: linear-gradient(rgba(0,12,103,1), rgba(0,12,103,.8));
     color: white;
@@ -385,20 +332,21 @@ footer{
     text-align: center;
 }
 /* SECCION RESPONSIVE */
-@media screen and (max-width:1180px){
-    .inicio{
+@media screen and (max-width: 1180px) {
+    .inicio {
         clip-path: none;
     }
 }
-@media screen and (max-width:800px){
-    .redes{
+
+@media screen and (max-width: 800px) {
+    .redes {
         display: none;
     }
-    #nav{
+    #nav {
         display: none;
     }
-    #nav.responsive{
-        background-color: rgba(0,0,0,.9);
+    #nav.responsive {
+        background-color: rgba(0, 0, 0, .9);
         top: 0;
         left: 0;
         height: 100vh;
@@ -411,64 +359,86 @@ footer{
         justify-content: center;
         z-index: 99;
     }
-    #nav.responsive a{
+    #nav.responsive a {
         font-size: 30px;
     }
-    #icono-nav{
+    #icono-nav {
         display: block;
     }
 
-    .inicio{
+    .inicio {
         height: auto;
     }
-    .inicio .fila{
+    .inicio .fila {
         display: block;
     }
-    .inicio .fila .col{
+    .inicio .fila .col {
         width: 100%;
         text-align: center;
     }
-    .inicio .fila .col h2{
+    .inicio .fila .col h2 {
         margin-top: 20px;
     }
-    .inicio .fila .col .contenedor-img{
-        width: 50%;
+    .inicio .fila .col .contenedor-img {
+        width: 100%; /* Ajuste importante */
+        text-align: center; /* Ajuste importante */
         margin-top: 30px;
     }
 
-    .servicios{
+    .servicios {
         position: static;
         padding: 20px;
     }
-    .servicios .fila{
+    .servicios .fila {
         display: block;
-        margin-bottom: 0;
+        margin-bottom: 20px; /* Ajuste para separar las filas */
     }
-    .servicios .fila .col{
-        width: 70%;
-        margin: auto;
+    .servicios .fila .col {
+        width: 100%; /* Ajuste importante */
+        text-align: center; /* Ajuste importante */
     }
-    .servicios .fila .col .card{
+    .servicios .fila .col .card {
         margin-bottom: 20px;
     }
-    .habilidades{
+    .habilidades {
         position: static;
     }
 
-    .trabajos nav a{
+    .trabajos nav a {
         margin: 0 5px;
     }
 
-    .contacto .fila{
-        display:  block !important;
+    .contacto .fila {
+        display: block !important;
     }
-    .contacto .fila .col{
+    .contacto .fila .col {
         text-align: center;
         width: 100% !important;
     }
-    .contacto .fila .col .info{
-        float: left;
+    .contacto .fila .col .info {
+        float: none;
         font-size: 12px;
-        width: 25%;
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
+
+/* Otros ajustes */
+.inicio .col p {
+    text-align: justify; /* Añadido para justificar el texto */
+}
+
+.servicios .card p {
+    text-align: justify; /* Añadido para justificar el texto */
+}
+
+.trabajos .galeria .item {
+    width: 100%; /* Ajuste importante */
+    text-align: center; /* Ajuste importante */
+}
+
+.trabajos .galeria .item .info {
+    width: 100%; /* Ajuste importante */
+}
+
+
