@@ -10,12 +10,12 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: #f6fafc;
+    background: linear-gradient(to right, #000636, #000000);
 }
 
 /* SECCION I N I C I O */
 .inicio{
-    background:linear-gradient(to right, #000c67, #007be5);
+    background:linear-gradient(to right, #000636, #000000);
     clip-path: polygon(0 0, 100% 0, 100% 46%, 47% 84%, 0 45%);
     height: 90vh;
     padding:  0 20px;
@@ -50,7 +50,7 @@ body{
     border: 2px solid transparent;
 }
 #inicio header nav a:hover{
-    border-bottom: 2px solid #ff00c3;
+    border-bottom: 2px solid #ff2cce;
 }
 .inicio .fila{
     display: flex;
@@ -81,7 +81,7 @@ body{
     padding: 5px 40px;
     border: 2px solid rgb(255, 255, 255);
     color: #fff;
-    background:linear-gradient(to right, #ff6fe0, #ff00d4);
+    background:linear-gradient(to right, #ff6fe0, #ff2cce);
     transition: .5s;
     cursor: pointer;
 }
@@ -125,7 +125,7 @@ body{
 .servicios .fila .col .card{
     border: 1px solid #8d8d8d;
     height: 400px;
-    background-color: #fff;
+    background: linear-gradient(to right, #000636, #000000);
     padding: 30px;
     border-radius: 20px;
     position: relative;
@@ -155,7 +155,7 @@ body{
     background: linear-gradient(#ffea00, #ffe100);
 }
 .color2{
-    background: linear-gradient(#d902ff, #ff029a);
+    background: linear-gradient(#d902ff, #ff2cce);
 }
 .color3{
     background: linear-gradient(#0040ff, #1ad1ff);
@@ -170,20 +170,24 @@ body{
     background: linear-gradient(#ff0000, #ff4a4a);
 }
 .servicios h3{
+    color: white;
     margin-bottom: 20px;
 }
 .servicios .card p{
-    color: #8d8d8d;
+    color: white;
     line-height: 28px;
     font-size: 12px;
 }
 .servicios .card a{
     text-decoration: none;
-    color: #008cff;
+    color: white;
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+}
+.servicios .card a:hover{
+    color: #ff2cce;
 }
 
 /* SECCION T R A B A J O S */
@@ -194,6 +198,7 @@ body{
 }
 .trabajos h2{
     text-align: center;
+    color: white;
 }
 .trabajos nav{
     text-align: center;
@@ -203,19 +208,20 @@ body{
     text-decoration: none;
     display: inline-block;
     margin: 0 20px;
-    color: #007be5;
+    color: white;
     font-weight: bold;
     padding: 3px 10px;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
+    border-radius: 15px;
 }
 .trabajos nav a:hover{
-    border: 3px solid #007be5;
-    background-color: #007be5;
+    border: 2px solid #ff2cce;
+    background-color: transparent;
     color: white;
 }
 /* Esta clase se agregrá dinámicamente cuando haya seleccionada una opción */
 .borde{
-    border: 3px solid #007be5 !important;  
+    border: 2px solid #ff2cce !important;  
 }
 .trabajos .galeria .item img{
     width: 100%;
@@ -235,8 +241,8 @@ body{
 }
 .trabajos .galeria .item img {
     width: 100%;
-    height: 250px; /* Ajusta esta altura según tus necesidades */
-    object-fit: cover; /* Ajusta esto según tus necesidades, por ejemplo, cover, contain, etc. */
+    height: 250px;
+    object-fit: cover;
 }
 .trabajos .galeria .item .info{
     position: absolute;
@@ -244,14 +250,14 @@ body{
     left: 0;
     bottom: 0;
     text-align: center;
-    background-color:#fff ;
+    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     padding: 20px;
     opacity: 0;
     transition: .3s;
 }
 .trabajos .galeria .item .info h3{
-    color: #000;
+    color: white;
     margin-bottom: 20px;
 }
 .trabajos .galeria .item .info span{
@@ -265,8 +271,11 @@ body{
     display: block;
     margin: 20px;
     text-decoration: none;
-    color: #007be5;
+    color: white;
     font-weight: bold;
+}
+.trabajos .galeria .item .info a:hover{
+    color: #ff2cce;
 }
 .trabajos .galeria .item:hover .info{
     opacity: 1;
@@ -275,8 +284,8 @@ body{
 /* SECCIÓN C O N T A C T O */
 .contacto{
     background:
-        linear-gradient(rgba(0,12,103,1), rgba(0,12,103,.8)),
-        url(ContactosIMG.webp);
+        linear-gradient(rgba(0,12,103,1), rgba(0,12,103,.5)),
+        url(./img/ContactosIMG.webp);
         background-size: cover;
         color: #fff;
         margin-top: 100px;
@@ -364,6 +373,14 @@ footer{
     }
     #icono-nav {
         display: block;
+    }
+    #icono-nav:hover{
+        background-color: #ff00d9;
+    }
+    
+    .cerrar-menu:hover {
+        color: #ff00d9; 
+        cursor: pointer;
     }
 
     .inicio {

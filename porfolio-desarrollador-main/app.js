@@ -137,7 +137,8 @@ function responsiveMenu(){
 
         //creamos el elemento que cierra el menu
         let span = document.createElement("span");
-        span.innerHTML = "X";
+        span.innerHTML = "x";
+        span.className = "cerrar-menu";
         document.getElementById("nav").appendChild(span);
 
         //quitamos el boton eliminar cuando se hace click sobre este
