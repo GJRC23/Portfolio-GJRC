@@ -41,9 +41,7 @@
                     <div class="col">
                         <h2>Desarrollador Web</h2>
                         <p>Formación en programación en lenguaje HTML, CSS, JavaScript y Angular que me han proporcionado las habilidades necesarias para trabajar de manera efectiva.</p>
-                        <button class="btn btn-1" onclick="descargarCV('español')">Descargar CV</button>
-                        <button class="btn btn-1" onclick="descargarCV('inglés')">Download CV</button>
-
+                        <button class="" onclick="descargarCV('español')">Descargar CV</button>
                     </div>
                     <div class="col">
                         <div class="contenedor-img">
@@ -237,11 +235,11 @@
             <div class="fila">
                 <div class="col">
                     <div class="info">
-                        <h3>Email:</h3>
+                        <h3>Email</h3>
                         <p>gastuconsoli8@gmail</p>
                     </div>
                     <div class="info">
-                        <h3>Teléfono:</h3>
+                        <h3>Teléfono</h3>
                         <p>+54 223 5987757</p>
                     </div>
                     <div class="info">
@@ -249,17 +247,29 @@
                         <p>Argentina</p>
                     </div>
                     <div class="info">
-                        <h3>Ciudad:</h3>
+                        <h3>Ciudad</h3>
                         <p>Mar del Plata</p>
                     </div>
                 </div>
                 <div class="col">
-                    <form id="form">
-                        <input type="text" name="from_name" for="from_name" placeholder="Nombre">
-                        <input type="text" name="reply_to" for="reply_to" placeholder="Correo">
-                        <textarea name="message" cols="30" rows="10" for="message" placeholder="Mensaje"></textarea>
-                        <input type="submit" value="Enviar" class="btn">
-                    </form>
+                    
+                    <div class="form-container">
+                        <form class="form">
+                            <div class="form-group">
+                                <label for="email">Nombre</label>
+                                <input required="" name="from_name" for="from_name" id="email" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo</label>
+                                <input required="" name="reply_to" for="reply_to" id="email" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="textarea">Mensaje</label>
+                                <textarea required="" cols="50" rows="10" for="message" id="textarea" name="message">          </textarea>
+                            </div>
+                            <button type="submit" value="Enviar" class="form-submit-btn">Submit</button>
+                        </form>
+                    </div>
 
                     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
@@ -273,7 +283,11 @@
     
     <footer class="footer">
         <p>Creado por Gastón Rodriguez Consoli - 2024</p>
-    </footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/gast%C3%B3n-rodriguez-consoli/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/GJRC23" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+        </div>
+    </footer>    
     <script src="app.js"></script>
 </body>
 </html>

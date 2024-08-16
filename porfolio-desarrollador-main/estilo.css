@@ -16,7 +16,7 @@ body{
 /* SECCION I N I C I O */
 .inicio{
     background:linear-gradient(to right, #000636, #000000);
-    clip-path: polygon(0 0, 100% 0, 100% 46%, 47% 84%, 0 45%);
+    clip-path: polygon(0 0, 100% 0, 100% 46%, 20% 84%, 0 45%);
     height: 90vh;
     padding:  0 20px;
 }
@@ -47,10 +47,11 @@ body{
     display: inline-block;
     padding: 5px 10px;
     text-transform: uppercase;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
 }
 #inicio header nav a:hover{
-    border-bottom: 2px solid #ff2cce;
+    border-bottom: 2px solid #fd67f3;
+    box-shadow: 7px 5px 56px -14px #fd67f3;
 }
 .inicio .fila{
     display: flex;
@@ -76,17 +77,25 @@ body{
     width: 100%;
 }
 .inicio .fila .col button{
-    background: none;
-    width: fit-content;
-    padding: 5px 40px;
-    border: 2px solid rgb(255, 255, 255);
-    color: #fff;
-    background:linear-gradient(to right, #ff6fe0, #ff2cce);
-    transition: .5s;
+    color: white;
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border: 1px solid #fd67f3;
+    border-radius: 50px;
+    background-color: transparent;
+    font-family: inherit;
+    text-align: center;
     cursor: pointer;
+    transition: 0.4s;
 }
 .inicio .fila .col button:hover{
-    transform: scale(1.1);
+    box-shadow: 7px 5px 56px -14px #fd67f3;
+}
+.inicio .fila .col button:active{
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px white;
 }
 #icono-nav{
     height: 30px;
@@ -102,7 +111,7 @@ body{
     background-color: #3e3e3e;
 }
 .sombra{
-    filter:drop-shadow(0em 30px 20px #9bd2f4);
+    filter:drop-shadow(0em 30px 20px #fd67f3);
 }
 /* SECCION S E R V I C I O S */
 .servicios{
@@ -124,7 +133,7 @@ body{
 }
 .servicios .fila .col .card{
     border: 1px solid #8d8d8d;
-    height: 400px;
+    height: 460px;
     background: linear-gradient(to right, #000636, #000000);
     padding: 30px;
     border-radius: 20px;
@@ -176,7 +185,7 @@ body{
 .servicios .card p{
     color: white;
     line-height: 28px;
-    font-size: 12px;
+    font-size: 15px;
 }
 .servicios .card a{
     text-decoration: none;
@@ -187,7 +196,7 @@ body{
     transform: translateX(-50%);
 }
 .servicios .card a:hover{
-    color: #ff2cce;
+    color: #fd67f3;
 }
 
 /* SECCION T R A B A J O S */
@@ -215,13 +224,18 @@ body{
     border-radius: 15px;
 }
 .trabajos nav a:hover{
-    border: 2px solid #ff2cce;
+    border: 2px solid #fd67f3;
     background-color: transparent;
+    box-shadow: 7px 5px 56px -10px white;
     color: white;
+}
+.trabajos nav a:active{
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px white;
 }
 /* Esta clase se agregrá dinámicamente cuando haya seleccionada una opción */
 .borde{
-    border: 2px solid #ff2cce !important;  
+    border: 1px solid #fd67f3 !important;
 }
 .trabajos .galeria .item img{
     width: 100%;
@@ -275,21 +289,18 @@ body{
     font-weight: bold;
 }
 .trabajos .galeria .item .info a:hover{
-    color: #ff2cce;
+    color: #fd67f3;
 }
 .trabajos .galeria .item:hover .info{
     opacity: 1;
     top: 0;
 }
+
 /* SECCIÓN C O N T A C T O */
 .contacto{
-    background:
-        linear-gradient(rgba(0,12,103,1), rgba(0,12,103,.5)),
-        url(./img/ContactosIMG.webp);
-        background-size: cover;
-        color: #fff;
-        margin-top: 100px;
-        padding: 80px 20px;
+    color: #fff;
+    margin-top: 100px;
+    padding: 80px 20px;
 }
 .contacto .contenedor-contacto{
     max-width: 1100px;
@@ -306,40 +317,155 @@ body{
     width: 50%;
 }
 .contacto .contenedor-contacto .info{
-    margin-bottom: 30px;
-    border-left: 3px solid #8d8d8d;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-left: 3px solid #fd67f3;
     padding-left: 8px;
 }
-.contacto .contenedor-contacto .info p{
-    color: #8d8d8d;
-}
-.contacto input, .contacto textarea{
-    width: 100%;
-    border: none;
-    background-color: transparent;
-    padding: 10px;
-    border: 1px solid #8d8d8d ;
-    margin-bottom: 20px;
-    outline: none;
+
+/* FORM */ 
+.form-container {
+    width: 400px;
+    background: linear-gradient(to left, #000636, #000000) padding-box,
+                linear-gradient(145deg, transparent 35%,#fd67f3, #4a40ff) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
 }
-.contacto .btn{
-    background-color: none;
-    padding: 5px 40px;
-    border: 2px solid;
+
+@keyframes gradient {
+0% {
+    background-position: 0% 50%;
+}
+
+50% {
+    background-position: 100% 50%;
+}
+
+100% {
+    background-position: 0% 50%;
+}
+}
+
+.form-container button:active {
+    scale: 0.95;
+}
+
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-container .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
     color: #fff;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+    outline: none;
+    border-color: #fd67f3;
+}
+
+.form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #fd67f3;
+}
+
+.form-container .form-submit-btn {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    color: white;
+    font-weight: 600;
+    width: 40%;
+    background: transparent;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    gap: 8px;
+    margin-top: 8px;
     cursor: pointer;
-    background: linear-gradient(to right, #ff62d0, #ff00d9);
+    border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+    box-shadow: 7px 5px 56px -14px #fd67f3;
+}
+.form-container .form-submit-btn:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px white;
 }
 
 /* FOOTER */
-footer{
-    background: linear-gradient(rgba(0,12,103,1), rgba(0,12,103,.8));
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: white;
-    padding: 7px 0;
-    font-size: 14px;
+    padding: 5px 25px;
     text-align: center;
 }
+
+.footer p {
+    margin: 0; /* Asegúrate de eliminar cualquier margen predeterminado */
+}
+
+.social-links a {
+    margin-left: 15px; /* Añade espacio entre los iconos de las redes sociales */
+    color: white; /* Asegúrate de que los íconos tengan el color deseado */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+}
+
+.social-links a:hover {
+    color: #fd67f3; /* Opcional: cambia el color al pasar el ratón sobre los iconos */
+}
+
 /* SECCION RESPONSIVE */
 @media screen and (max-width: 1180px) {
     .inicio {
@@ -375,11 +501,14 @@ footer{
         display: block;
     }
     #icono-nav:hover{
-        background-color: #ff00d9;
+        background-color: #fd67f3;
     }
-    
+
+    .cerrar-menu{
+        font-size: 24px;
+    }
     .cerrar-menu:hover {
-        color: #ff00d9; 
+        color: #fd67f3; 
         cursor: pointer;
     }
 
