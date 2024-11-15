@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="Icon Programmer.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js" integrity="sha512-DHNepbIus9t4e6YoMBSJLwl+nnm0tIwMBonsQQ+W9NKN6gVVVbomJs9Ii3mQ+HzGZiU5FyJLdnAz9a63ZgZvTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilo.css">
     <title>Porfolio</title>
@@ -21,14 +22,18 @@
                 <header>
                     <div class="logo">
                         <i class="fa-brands fa-codepen"></i>
-                        <h1>Gastón Rodriguez Consoli</h1>
+                        <h1 id="name-title">Gastón Rodriguez Consoli</h1>
                     </div>
                     <nav id="nav" class=""">
-                        <a href="#servicios">Formación</a>
-                        <a href="#trabajos">Proyectos</a>
-                        <a href="#contacto">Contacto</a>
+                        <a id="nav-formation" href="#servicios">Formación</a>
+                        <a id="nav-projects" href="#trabajos">Proyectos</a>
+                        <a id="nav-contact" href="#contacto">Contacto</a>
                         <a href="https://www.linkedin.com/in/gast%C3%B3n-rodriguez-consoli/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/GJRC23" target="_blank"><i class="fa-brands fa-square-github"></i></i></a>
+                        <span class="language-switch">
+                            <button onclick="changeLanguage('es')">ES</button>
+                            <button onclick="changeLanguage('en')">EN</button>
+                        </span>
                     </nav>
 
                     <!-- Icono del menu responsive -->
@@ -39,9 +44,9 @@
     
                 <div class="fila">
                     <div class="col">
-                        <h2>Desarrollador Web</h2>
-                        <p>Formación en programación en lenguaje HTML, CSS, JavaScript y Angular que me han proporcionado las habilidades necesarias para trabajar de manera efectiva.</p>
-                        <button class="" onclick="descargarCV('español')">Descargar CV</button>
+                        <h2 class="title-profession">Desarrollador Web</h2> <!-- Clase agregada -->
+                        <p class="intro-text">Formación en programación en JavaScript, utilizando React y Next que me han proporcionado las habilidades necesarias para trabajar de manera efectiva.</p>
+                        <button class="" onclick="descargarCV()">Descargar CV</button>
                     </div>
                     <div class="col">
                         <div class="contenedor-img">
@@ -258,30 +263,25 @@
                     <div class="form-container">
                         <form class="form">
                             <div class="form-group">
-                                <label for="textarea">Nombre</label>
-                                <input required="" name="from_name" for="from_name" id="email" type="text">
+                                <label for="from_name">Nombre</label>
+                                <input required="" name="from_name" id="from_name" type="text">
                             </div>
                             <div class="form-group">
-                                <label for="email">Correo</label>
-                                <input required="" name="reply_to" for="reply_to" id="email" type="text">
+                                <label for="reply_to">Correo</label>
+                                <input required="" name="reply_to" id="reply_to" type="text">
                             </div>
                             <div class="form-group">
-                                <label for="textarea">Mensaje</label>
-                                <textarea required="" cols="50" rows="10" for="message" id="textarea" name="message">          </textarea>
-                            </div>
+                                <label for="message">Mensaje</label>
+                                <textarea required="" id="message" name="message"></textarea>
+                            </div>                            
                             <button type="submit" value="Enviar" class="form-submit-btn">Enviar</button>
                         </form>
                     </div>
-
-                    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-                    <script type="text/javascript">
-                        emailjs.init('IpphO5Jp4ep8nmNCG');
-                    </script>
                 </div>
             </div>
         </div>
     </section>
+    
     
     <!-- sección Footer -->
     <footer class="footer">

@@ -52,7 +52,30 @@ body{
 #inicio header nav a:hover{
     border-bottom: 2px solid #fd67f3;
     box-shadow: 7px 5px 56px -14px #fd67f3;
+}  
+
+
+.language-switch {
+    gap: 10px;
 }
+
+.language-switch button {
+    background-color: transparent;
+    border: 1px solid #fd67f3;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.language-switch button:hover {
+    background-color: #fd67f3;
+    color: #000;
+}
+
+
+
 .inicio .fila{
     display: flex;
     margin-top: 50px;
@@ -545,6 +568,10 @@ footer {
         width: 100%; /* Ajuste importante */
         text-align: center; /* Ajuste importante */
         margin-top: 30px;
+    }
+    .language-switch
+    {
+        margin-bottom: 15px;
     }
 
     .servicios {
