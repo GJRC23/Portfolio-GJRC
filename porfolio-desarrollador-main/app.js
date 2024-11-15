@@ -112,7 +112,7 @@ const translations = {
         navProjects: "Projects",
         navContact: "Contact",
         btnDownload: "Download CV",
-        introText: "Training in JavaScript programming, using React and Next, which have given me the necessary skills to work effectively.",
+        introText: "Training in JavaScript programming, using React and Next.js, which have given me the necessary skills, knowledge, and hands-on experience to work effectively and confidently.",
         titleProfession: "Web Developer",
         education: [
             {
