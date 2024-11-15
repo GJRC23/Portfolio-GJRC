@@ -70,7 +70,6 @@ function responsiveMenu(){
 }
 
 //Este codigo es para agregar una función a cada links del menu
-//responsive
 //cuando se presione en cualquier de los links del menu debe desaparecer el menu
 const links = document.querySelectorAll("#nav a");
 for(i=0; i < links.length;i++){
