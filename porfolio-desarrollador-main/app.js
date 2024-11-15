@@ -297,8 +297,7 @@ function changeLanguage(lang) {
     // Actualiza el botón "Descargar CV"
     const downloadBtn = document.querySelector(".inicio .col button");
     if (downloadBtn) downloadBtn.textContent = translations[lang].btnDownload;
-}
-
+};
 
 //Descarga CV
 function descargarCV() {
@@ -324,7 +323,6 @@ function descargarCV() {
     link.click();
     document.body.removeChild(link);
 }
-
 
 //Función para filtrar las categorías de los trabajos
 function verCategoria(cat){
